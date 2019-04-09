@@ -1,0 +1,22 @@
+{
+  "name": "css-hatena-blog-yumeutsutsu",
+  "version": "1.0.0",
+  "main": "theme-hatena-blog-yumeutsutsu.css",
+  "repository": "ssh://git@github.com/c18t/css-hatena-blog-yumeutsutsu.git",
+  "author": "鵜巷 <u@chimata.org>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm-run-all -p watch server",
+    "server": "live-server",
+    "watch": "stylus --include-css -c -m -w theme-hatena-blog-yumeutsutsu.styl -o theme-hatena-blog-yumeutsutsu.css",
+    "prod": "stylus --include-css -c theme-hatena-blog-yumeutsutsu.styl -o theme-hatena-blog-yumeutsutsu.css"
+  },
+  "dependencies": {
+    "ress": "^1.2.2",
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5"
+  }
+}

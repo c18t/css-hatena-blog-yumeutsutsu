@@ -1,0 +1,217 @@
+//@import "node_modules/ress/ress.css";
+@import "variable.styl";
+
+// hatena header for sp-suggest
+#header-container {}
+
+// hatena header
+#globalheader-container {}
+
+// blog container
+#container {
+  #container-inner {
+
+    // blog title
+    header#blog-title {
+      #blog-title-inner {
+        #blog-title-content {
+          h1#title {
+            a {}
+          }
+        }
+      }
+    }
+
+    // blog header
+    #top-editarea {}
+
+    // top box
+    #top-box {
+      .breadcrumb {
+        .breadcrumb-inner {
+          a.breadcrumb-link {
+            span {}
+          }
+          .breadcrumb-child {
+            a.breadcrumb-child-link {
+              span {}
+            }
+            span {}
+          }
+          .breadcrumb-gt {}
+        }
+      }
+    }
+
+    // blog content
+    #content {
+      #content-inner {
+
+        // content wrapper
+        #wrapper {
+
+          // wrapper main
+          #main {
+            #main-inner {
+
+              // entry
+              article {
+                div.entry-inner {
+
+                  // entry header
+                  header.entry-inner {
+                    .entry-date {
+                      a {
+                        time {
+                          .date-year {}
+                          .date-month {}
+                          .date-day {}
+                          .hyphen {}
+                        }
+                      }
+                    }
+                    h1.entry-title {
+                      a.entry-title-link {}
+                    }
+                    .entry-categories {
+                      a.entry-category-link {}
+                    }
+                    // 編集
+                    .entry-header-menu {
+                      a {}
+                    }
+                  }
+
+                  // entry content
+                  .entry-content {
+                    p {
+                      a.keyward {}
+                    }
+                  }
+
+                  // entry footer
+                  footer.entry-footer {
+                    .entry-footer-section {
+                      .author {
+                        .fn {
+                          .user-name-nickname {}
+                          .user-name-hatena-id {}
+                          .user-name-paren {}
+                        }
+                      }
+                      .entry-footer-time {
+                        a {
+                          time {}
+                        }
+                      }
+                    }
+                    .hatena-star-container {
+                      .hatena-star-comment-container {
+                        img.hatena-star-comment-button {}
+                      }
+                      .hatena-star-star-container {
+                        img.hatena-star-add-button {}
+                      }
+                    }
+                    .hatena-star-metadata {
+                      a.hatena-star-permalink {}
+                    }
+                    .social-buttons {}
+                    .google-afc-image {}
+                    .customized-footer {
+                      .entry-footer-modules#entry-footer-secondary-modules {
+                        .hatena-module.hatena-module-related-entries {
+                          .hatena-module-title {}
+                          .hatena-module-body {
+                            .related-entries {
+                              li.related-entries-item {
+                                .related-entries-item-inner {
+                                  .related-entries-date-link {
+                                    a {
+                                      time {}
+                                    }
+                                  }
+                                  a.related-entries-title-link {}
+                                  .related-entries-entry-body {}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .pager {
+                .pager-prev {
+                  a {
+                    .pager-arrow {}
+                  }
+                }
+                .pager-next {
+                  a {
+                    .pager-arrow {}
+                  }
+                }
+              }
+            }
+          }
+
+          // wrapper aside
+          aside#box1 {
+            #box1-inner {}
+          }
+
+        }
+
+        // content aside
+        aside#box2 {
+          #box2-inner {
+            .hatena-module.hatena-module-profile {
+              .hatena-module-title {}
+              .hatena-module-body {
+                a.profile-icon-link {
+                  img.profile-icon {}
+                }
+                .id {
+                  a.hatena-id-link {
+                    span {
+                      .user-name-nickname {}
+                      .user-name-hatena-id {}
+                      .user-name-paren {}
+                    }
+                  }
+                }
+                .hatena-follow-button-box {}
+                .hatena-follow-button-box.btn-subscribe {}
+                .hatena-follow-button-box.btn-twitter {}
+                
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    // blog footer
+    #bottom-editarea {}
+  }
+}
+
+// hatena footer
+footer#footer {
+  #footer-inner {
+    address.footer-address {
+      a {
+        img {}
+        .footer-address-name {}
+      }
+    }
+    .services {
+      a.report-abuse-link {}
+    }
+  }
+}

@@ -1,0 +1,436 @@
+//@import "node_modules/ress/ress.css";
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC:200&subset=japanese');
+@import "variable.styl";
+
+small()
+  @media screen and (min-width: $media-small)
+    {block}
+
+middle()
+  @media screen and (min-width: $media-middle)
+    {block}
+
+large()
+  @media screen and (min-width: $media-large)
+    {block}
+
+clearfix()
+  &::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+
+body {
+  font-size: 1rem;
+  font-family: "Noto Serif SC", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+// hatena header for sp-suggest
+#header-container {}
+
+// hatena header
+#globalheader-container {}
+
+// blog container
+#container {
+  #container-inner {
+
+    // blog title
+    header#blog-title {
+      display: none;
+    }
+
+    // blog header
+    #top-editarea {
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        +small() {
+          margin: 1rem auto;
+        }
+        +middle() {
+          margin: 3rem auto;
+        }
+        +large() {
+          margin: 6rem auto;
+        }
+        a {
+          color: #333;
+          text-decoration: none;
+
+          &:hover span{
+            display: none;
+          }
+          &:hover::before {
+            display: inline;
+            content: "それで"
+            color: #555;
+          }
+          &:hover {
+            color: #566;
+          }
+        }
+      }
+    }
+
+    // top box
+    #top-box {
+      .breadcrumb {
+        text-align: center;
+        +small() {
+          margin: 1rem auto;
+        }
+        +middle() {
+          margin: 2rem auto;
+        }
+        +large() {
+          margin: 4rem auto;
+        }
+        .breadcrumb-inner {
+          a.breadcrumb-link {
+            color: #333;
+            text-decoration: none;
+            &:hover {
+              color: #666;
+            }
+            span {}
+          }
+          .breadcrumb-child {
+            a.breadcrumb-child-link {
+              color: #333;
+              text-decoration: none;
+              &:hover {
+                color: #666;
+              }
+              span {}
+            }
+            span {}
+          }
+          .breadcrumb-gt {}
+        }
+      }
+    }
+
+    // blog content
+    #content {
+      #content-inner {
+        position: relative;
+
+        // content wrapper
+        #wrapper {
+          // wrapper main
+          #main {
+            #main-inner {
+
+              // entry
+              article {
+                color: $light-color;
+                background-color: $light;
+                padding: 0.1rem 0;
+                a {
+                  color: $light-link-color;
+                  &:hover {
+                    color: $light-link-hover-color;
+                  }
+                }
+                &.night {
+                  color: $night-color;
+                  background-color: $night;
+                  a {
+                    color: $night-link-color;
+                    &:hover {
+                      color: $night-link-hover-color;
+                    }
+                  }
+                }
+
+                div.entry-inner {
+                  +small() {
+                    margin: 1rem auto;
+                    max-width: 480px;
+                  }
+                  +middle() {
+                    margin: 3rem auto;
+                    max-width: 480px;
+                  }
+                  +large() {
+                    margin: 6rem auto;
+                    max-width: 720px;
+                  }
+
+                  // entry header
+                  header.entry-header {
+                    position: relative;
+                    text-align: right;
+                    margin: 0 1rem 2rem;
+
+                    .entry-date {
+                      display: inline;
+                      font-size: 0.8rem;
+                      a {
+                        text-decoration: none;
+                        time {
+                          .date-year {}
+                          .date-month {}
+                          .date-day {}
+                          .hyphen {}
+                        }
+                      }
+                    }
+                    h1.entry-title {
+                      display: inline;
+                      font-size: 0.8rem;
+                      a.entry-title-link {
+                        text-decoration: none;
+                      }
+                    }
+                    .entry-categories {
+                      position: absolute;
+                      top: 1.2rem; left: 0;
+                      font-size: 1.2rem;
+
+                      a.entry-category-link {
+                        text-decoration: none;
+                      }
+                    }
+                    // 編集
+                    .entry-header-menu {
+                      position: absolute;
+                      top: 1.2rem; right: 0;
+                      a {}
+                    }
+                  }
+
+                  // entry content
+                  .entry-content {
+                    margin: 0 1rem;
+                    p {
+                      a.keyword {
+                        text-decoration: none;
+                        &:hover {
+                          text-decoration: underline;
+                        }
+                      }
+                    }
+                  }
+
+                  // entry footer
+                  footer.entry-footer {
+                    margin: 0 1rem;
+                    .entry-footer-section {
+                      display: inline;
+                      .author {
+                        .fn {
+                          .user-name-nickname {}
+                          .user-name-hatena-id {
+                            display: none;
+                          }
+                          .user-name-paren {
+                            display: none;
+                          }
+                        }
+                      }
+                      .entry-footer-time {
+                        a {
+                          time {}
+                        }
+                      }
+                    }
+                    .hatena-star-container {
+                      display: inline;
+                      .hatena-star-comment-container {
+                        img.hatena-star-comment-button {}
+                      }
+                      .hatena-star-star-container {
+                        img.hatena-star-add-button {}
+                      }
+                    }
+                    .hatena-star-metadata {
+                      a.hatena-star-permalink {}
+                    }
+                    .social-buttons {}
+                    .google-afc-image {
+                      margin: 3rem auto;
+                      text-align: center;
+                    }
+                    .customized-footer {
+                      .entry-footer-modules#entry-footer-secondary-modules {
+                        .hatena-module.hatena-module-related-entries {
+                          .hatena-module-title {}
+                          .hatena-module-body {
+                            .related-entries {
+                              li.related-entries-item {
+                                margin: 1rem;
+                                .related-entries-item-inner {
+                                  .related-entries-date-link {
+                                    a {
+                                      time {}
+                                    }
+                                  }
+                                  a.related-entries-title-link {}
+                                  .related-entries-entry-body {}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              article.night + .pager {
+                color: $night-color;
+                background-color: $night;
+
+                .pager-prev, .pager-next {
+                  a {
+                    color: $night-link-color;
+                    text-decoration: none;
+                    &:hover {
+                      color: $night-link-hover-color;
+                    }
+                    .pager-arrow {}
+                  }
+                }
+              }
+
+              .pager {
+                padding: 3rem 1rem;
+                .pager-prev {
+                  display: block;
+                  float: left;
+                  a {
+                    color: $light-link-color;
+                    text-decoration: none;
+                    &:hover {
+                      color: $light-link-hover-color;
+                    }
+                    .pager-arrow {}
+                  }
+                }
+                .pager-next {
+                  display: block;
+                  float: right;
+                  a {
+                    color: $light-link-color;
+                    text-decoration: none;
+                    &:hover {
+                      color: $light-link-hover-color;
+                    }
+                    .pager-arrow {}
+                  }
+                }
+                clearfix()
+              }
+            }
+          }
+
+          // wrapper aside
+          aside#box1 {
+            #box1-inner {}
+          }
+
+        }
+
+        // content aside
+        aside#box2 {
+          position: absolute;
+          right: 0;
+          display: none;
+          +small() {
+            display: none;
+          }
+          +middle() {
+            display: block;
+            top: -7rem;
+          }
+          +large() {
+            display: block;
+            top: -10rem;
+          }
+          padding: 1rem;
+          border: 1px solid transparent;
+          border-radius: 8px 0 0 8px;
+          background-color: $night;
+          font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+            #box2-inner {
+            .hatena-module.hatena-module-profile {
+              .hatena-module-title {
+                display: none;
+              }
+              .hatena-module-body {
+                a.profile-icon-link {
+                  display: none;
+                  img.profile-icon {}
+                }
+                .id {
+                  display: none;
+                  a.hatena-id-link {
+                    span {
+                      .user-name-nickname {}
+                      .user-name-hatena-id {}
+                      .user-name-paren {}
+                    }
+                  }
+                }
+                .hatena-follow-button-box.btn-subscribe {}
+                .hatena-follow-button-box.btn-twitter {}
+                
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    // blog footer
+    #bottom-editarea {}
+  }
+}
+
+// hatena footer
+footer#footer {
+  color: $night-color;
+  background-color: $night;
+  padding: 0.1rem 0;
+
+  #footer-inner {
+    text-align: center;
+
+    +small() {
+      margin: 1rem auto;
+      max-width: 480px;
+    }
+    +middle() {
+      margin: 3rem auto;
+      max-width: 480px;
+    }
+    +large() {
+      margin: 6rem auto;
+      max-width: 720px;
+    }
+
+    address.footer-address {
+      a {
+        color: $night-color;
+        text-decoration: none;
+        img {}
+        .footer-address-name {}
+      }
+    }
+    .services {
+      a {
+        color: $night-color;
+        text-decoration: none;
+      }
+      a.report-abuse-link {
+        color: $night-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
